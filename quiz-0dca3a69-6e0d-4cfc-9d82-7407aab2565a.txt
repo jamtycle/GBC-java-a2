@@ -1,0 +1,5 @@
+Which command will stop an infinite loop?:No Answer
+_______ is the process of finding errors and fixing them within a program.:No Answer
+Kim has just constructed her first for loop within the Java language.  Which of the following is not a required part of a for loop?:No Answer
+What does HTML stand for?:No Answer
+Which of the following is the correct way to use the standard namespace in C++?:No Answer

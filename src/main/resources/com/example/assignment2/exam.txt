@@ -1,0 +1,8 @@
+What is the most used Programming language around the world?,C++,Java,Python,Ruby,1
+What does HTML stand for?,Hyper Trainer Marking Language,Hyper Text Marketing Language,Hyper Text Markup Language,Hyper Text Markup Leveler,2
+Which of the following is the correct way of making a string in Java?,String "Text";,String text = 'text';,String text = "text",String text = "text";,3
+Which of the following is the correct way to use the standard namespace in C++?,Using namespace std;,Using namespace standard;,Using standard namespace;,Standard namespace used;,0
+_______ is the process of finding errors and fixing them within a program.,Compiling,Executing,Debugging,Scanning,2
+Kim has just constructed her first for loop within the Java language.  Which of the following is not a required part of a for loop?,Initialization,Condition,Variable,Increment,3
+Which command will stop an infinite loop?,Alt - C,Shift - C,Esc,Ctrl - C,3
+A loop that never ends is referred to as a(n)_________.,While loop,Infinite loop,Recursive loop,for loop,1
