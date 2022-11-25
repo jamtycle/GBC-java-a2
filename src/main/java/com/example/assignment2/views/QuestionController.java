@@ -7,8 +7,13 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.Border;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.util.Pair;
 
 import java.util.Optional;
@@ -80,8 +85,9 @@ public class QuestionController {
         questions_set = quiz.getValue();
 
         VBox box = (VBox) sp_quiz.getContent();
-        box.setSpacing(10);
-        box.setPadding(new Insets(10));
+        box.setSpacing(20);
+        box.setPadding(new Insets(15));
+        box.setStyle("-fx-border-color: black");
         box.prefWidthProperty().bind(sp_quiz.widthProperty());
         for (Question q : questions_set) {
             box.getChildren().add(QuestionContainer(q));
@@ -92,6 +98,15 @@ public class QuestionController {
 
         lbl_time.setText(String.format("%02d:%02d", exam_time / 60, exam_time % 60));
         lbl_marks.setText("?/100");
+
+        lbl_time.setText(String.format("%02d:%02d", exam_time / 60, exam_time % 60));
+        lbl_marks.setText("?/100");
+
+        lbl_marks.setFont(Font.font("Arial", FontWeight.EXTRA_BOLD,18));
+        lbl_marks.setStyle("-fx-border-color: black; -fx-background-color: #F2F1E8;");
+
+        lbl_time.setFont(Font.font("Arial", FontWeight.BOLD,16));
+        lbl_time.setStyle("-fx-border-color: black; -fx-background-color: #F2F1E8; -fx-text-fill: #B50000;");
     }
 
     @FXML
@@ -148,7 +163,7 @@ public class QuestionController {
 
     private VBox QuestionContainer(Question _question) {
         VBox box = new VBox();
-        box.setSpacing(10);
+        box.setSpacing(20);
         box.prefWidthProperty().bind(sp_quiz.widthProperty());
         box.setId(_question.getID());
 
@@ -156,6 +171,8 @@ public class QuestionController {
         qtext.prefWidthProperty().bind(box.widthProperty());
         qtext.setText(_question.getQuestion());
         box.getChildren().add(qtext);
+        qtext.setFont(Font.font(" Arial", FontWeight.EXTRA_BOLD, 14.5));
+        qtext.setStyle("-fx-text-fill: #53001D");
 
         int i = 0;
         ToggleGroup group = new ToggleGroup();
@@ -165,6 +182,7 @@ public class QuestionController {
             rb.setText(answer);
             rb.setId(String.valueOf(i++));
             rb.setToggleGroup(group);
+            rb.setFont(Font.font("Arial",FontWeight.SEMI_BOLD,14));
             rb.setOnAction(actionEvent -> {
                 RadioButton selected = (RadioButton) group.getSelectedToggle();
                 _question.setSelected(Integer.parseInt(selected.getId()));

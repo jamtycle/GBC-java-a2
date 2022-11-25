@@ -6,7 +6,7 @@
 <?import javafx.scene.text.*?>
 
 <VBox alignment="CENTER" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment2.views.QuestionController">
-    <GridPane fx:id="gp_container" alignment="CENTER" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #cccccc;">
+    <GridPane fx:id="gp_container" alignment="CENTER" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #E3E7F1;">
         <columnConstraints>
             <ColumnConstraints hgrow="NEVER" maxWidth="458.0" minWidth="10.0" prefWidth="180.0" />
             <ColumnConstraints hgrow="NEVER" maxWidth="711.0" minWidth="10.0" prefWidth="113.0" />
@@ -20,9 +20,10 @@
             <RowConstraints maxHeight="506.0" minHeight="10.0" prefHeight="475.0" valignment="CENTER" vgrow="ALWAYS" />
             <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="46.0" valignment="CENTER" vgrow="NEVER" />
         </rowConstraints>
-        <Label alignment="CENTER" prefHeight="16.0" prefWidth="793.0" text="You should answer the following questions. Select a single answer from the four choices." textAlignment="CENTER" GridPane.columnSpan="5">
+        <Label alignment="CENTER" prefHeight="16.0" prefWidth="793.0" text="You should answer the following questions. Select a single answer from the four choices." style="-fx-text-fill: darkblue"
+               textAlignment="CENTER" GridPane.columnSpan="5">
           <font>
-              <Font name="System Bold" size="13.0" />
+              <Font name="System Bold" size="14.0" />
           </font>
           <GridPane.margin>
               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -34,19 +35,27 @@
               <Insets bottom="10.0" left="20.0" top="10.0" />
           </GridPane.margin>
          <font>
-            <Font name="System Bold" size="13.0" />
+            <Font name="System Bold" size="18" />
          </font>
         </Label>
         <TextField fx:id="txt_names" promptText="First-Name Last-Name" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
-           <GridPane.margin>
-               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+
+            <font>
+                <Font size="16"/>
+            </font>
+            <GridPane.margin>
+               <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
            </GridPane.margin>
         </TextField>
         <ScrollPane fx:id="sp_quiz" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="5" GridPane.rowIndex="2">
             <VBox prefHeight="200.0" prefWidth="516.0" />
         </ScrollPane>
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="1" GridPane.rowIndex="3">
-            <Button mnemonicParsing="false" onAction="#onSubmit" prefHeight="35.0" prefWidth="168.0" text="Submit" />
+            <GridPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </GridPane.margin>
+            <Button mnemonicParsing="false" onAction="#onSubmit" prefHeight="35.0" prefWidth="168.0" text="Submit"
+                    style="-fx-effect: dropshadow(one-pass-box , black , 1, 0.0 , 0 , 1 ); -fx-font-size: 15; -fx-background-color: #BDC6D9; "/>
         </HBox>
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
          <children>
@@ -56,15 +65,21 @@
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Button mnemonicParsing="false" onAction="#onGetAverage" prefHeight="33.0" prefWidth="140.0" text="Get Average" />
+                <GridPane.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </GridPane.margin>
+                <children>
+                  <Button mnemonicParsing="false" onAction="#onGetAverage" prefHeight="33.0" prefWidth="140.0" text="Get Average"
+                          style="-fx-effect: dropshadow(one-pass-box , black , 1, 0.0 , 0 , 1 ); -fx-font-size: 15; -fx-background-color: #BDC6D9; "/>
                </children>
             </HBox>
          </children>
         </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
-         <children>
-            <Button mnemonicParsing="false" onAction="#onQuizStart" prefHeight="32.0" prefWidth="126.0" text="Start Quiz" />
+
+          <children>
+            <Button mnemonicParsing="false" onAction="#onQuizStart" prefHeight="32.0" prefWidth="126.0" text="Start Quiz"
+                    style="-fx-effect: dropshadow(one-pass-box , black , 1, 0.0 , 0 , 1 ); -fx-font-size: 15; -fx-background-color: #BDC6D9; "/>
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
@@ -73,8 +88,13 @@
          </children>
       </HBox>
       <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+          <GridPane.margin>
+              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+          </GridPane.margin>
          <children>
-               <Button mnemonicParsing="false" onAction="#onCalculateMark" prefHeight="35.0" prefWidth="145.0" text="Calculate Grade" />
+               <Button mnemonicParsing="false" onAction="#onCalculateMark" prefHeight="35.0" prefWidth="145.0" text="Calculate Grade"
+                       style="-fx-effect: dropshadow(one-pass-box , black , 1, 0.0 , 0 , 1 ); -fx-font-size: 15; -fx-background-color: #BDC6D9; "/>
+
          </children>
       </HBox>
     </GridPane>
